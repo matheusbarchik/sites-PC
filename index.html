@@ -32,6 +32,21 @@
             text-decoration: none;
             color: #1a73e8;
         }
+        #portfolioButton {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #portfolioButton:hover {
+            background-color: #155ab6;
+        }
+        
     </style>
 </head>
 <body>
@@ -53,7 +68,24 @@
 
         <h2>Foto</h2>
         <img src="https://br.web.img2.acsta.net/r_1920_1080/pictures/17/11/06/22/25/3680962.jpg" alt="foto Ibere">
+        <script>
+            // Seleciona a div container
+            const container = document.querySelector('.container');
 
+            // Cria o botão
+            const button = document.createElement('button');
+            button.id = 'portfolioButton';
+            button.textContent = 'Abrir Portfólio';
+
+            // Adiciona evento para abrir a página em nova aba
+            button.addEventListener('click', () => {
+            window.open('https://matheusbarchik.github.io/portifolio2/', '_blank');
+           });
+
+        // Adiciona o botão na div container, no final
+        container.appendChild(button);
+        </script>
+        
         <h2>Vídeo</h2>
         <video controls>
             <source src="https://www.youtube.com/watch?v=UuK_KwQmnDM&list=PLYjrJH3e_wDN4oO1XWx0mJEwJxCsQT2b6&index=34" type="video/mp4">
